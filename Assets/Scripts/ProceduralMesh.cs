@@ -11,11 +11,24 @@ public class ProceduralMesh : MonoBehaviour
 {
     Mesh mesh;
 
+    [SerializeField, Range(1, 10)]
+    int resolution = 1;
+
     private void Awake()
     {
         mesh = new Mesh() { name = "Procedural Mesh" };
-        GenerateMesh();
         GetComponent<MeshFilter>().mesh = mesh;
+    }
+
+    private void OnValidate()
+    {
+        enabled = true;
+    }
+
+    private void Update()
+    {
+        GenerateMesh();
+        enabled = false;
     }
 
     void GenerateMesh()
@@ -23,7 +36,7 @@ public class ProceduralMesh : MonoBehaviour
         Mesh.MeshDataArray meshDataArray = Mesh.AllocateWritableMeshData(1);
         Mesh.MeshData meshData = meshDataArray[0];
 
-        MeshJob<SquareGrid, SingleStream>.ScheduleParallel(mesh, meshData, default).Complete();
+        MeshJob<SquareGrid, SingleStream>.ScheduleParallel(mesh, meshData, resolution, default).Complete();
 
         Mesh.ApplyAndDisposeWritableMeshData(meshDataArray, mesh);
     }

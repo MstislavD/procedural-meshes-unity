@@ -31,4 +31,6 @@ namespace ProceduralMeshes
             generator.Execute(index, streams);
         }
     }
+
+    public delegate JobHandle MeshJobScheduleDelegate(Mesh mesh, Mesh.MeshData meshData, int resolution, JobHandle dependancy);
 }

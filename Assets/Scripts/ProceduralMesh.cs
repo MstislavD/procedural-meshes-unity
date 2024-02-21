@@ -22,7 +22,7 @@ public class ProceduralMesh : MonoBehaviour
 
     Mesh mesh;
 
-    [SerializeField, Range(1, 10)]
+    [SerializeField, Range(1, 50)]
     int resolution = 1;
 
     private void Awake()

@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshType: 1
-  resolution: 5
+  resolution: 40
 --- !u!23 &489514375
 MeshRenderer:
   m_ObjectHideFlags: 0

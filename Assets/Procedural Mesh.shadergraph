@@ -244,6 +244,20 @@
                 },
                 "m_SlotId": 0
             }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "fe85502fbdc540f88a54b2d12cd7e7b9"
+                },
+                "m_SlotId": 7
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "a94b63a563434848925a791207d9126b"
+                },
+                "m_SlotId": 0
+            }
         }
     ],
     "m_VertexContext": {
@@ -1055,6 +1069,29 @@
     "m_Property": {
         "m_Id": "109e231e428449de96e2dd01ddbfcd93"
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
+    "m_ObjectId": "69f1781b7323449dbe437bc907058032",
+    "m_Id": 7,
+    "m_DisplayName": "TangentOut",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "TangentOut",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_Labels": []
 }
 
 {
@@ -1939,10 +1976,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -360.0,
-            "y": -106.4000244140625,
-            "width": 215.20001220703126,
-            "height": 189.60003662109376
+            "x": -327.20001220703127,
+            "y": -114.40000915527344,
+            "width": 216.8000030517578,
+            "height": 189.59999084472657
         }
     },
     "m_Slots": [
@@ -1966,6 +2003,9 @@
         },
         {
             "m_Id": "2f04e2998d5546c7908f283d4da41bb0"
+        },
+        {
+            "m_Id": "69f1781b7323449dbe437bc907058032"
         }
     ],
     "synonyms": [

@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e618c82c290060c419f99d6e29933a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshType: 1
+  meshType: 2
   resolution: 40
 --- !u!23 &489514375
 MeshRenderer:

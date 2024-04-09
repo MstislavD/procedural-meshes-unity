@@ -26,10 +26,20 @@ namespace ProceduralMeshes.Generators
             float xOffset = -0.25f;
             float uOffset = 0f;
 
+            int iA = -Resolution - 2;
+            int iB = -Resolution - 1;
+            int iC = -1;
+            int iD = 0;
+            var tA = int3(iA, iC, iD);
+            var tB = int3(iA, iD, iB);
+
+
             if ((z & 1) == 1)
             {
                 xOffset = 0.25f;
                 uOffset = 0.5f / (Resolution + 0.5f);
+                tA = int3(iA, iC, iB);
+                tB = int3(iB, iC, iD);
             }
 
             xOffset = xOffset / Resolution - 0.5f;
@@ -54,8 +64,8 @@ namespace ProceduralMeshes.Generators
 
                 if (z > 0)
                 {
-                    streams.SetTriangle(ti + 0, vi + int3(-Resolution - 2, -1, -Resolution - 1));
-                    streams.SetTriangle(ti + 1, vi + int3(-Resolution - 1, -1, 0));
+                    streams.SetTriangle(ti + 0, vi + tA);
+                    streams.SetTriangle(ti + 1, vi + tB);
                 }              
             }
             

@@ -63,6 +63,13 @@ namespace ProceduralMeshes.Generators
                 vertex.position.z = zCoordinates.y;
                 vertex.texCoord0.y = 0.25f;
                 streams.SetVertex(vi + 6, vertex);
+
+                streams.SetTriangle(ti + 0, vi + int3(0, 1, 2));
+                streams.SetTriangle(ti + 1, vi + int3(0, 2, 3));
+                streams.SetTriangle(ti + 2, vi + int3(0, 3, 4));
+                streams.SetTriangle(ti + 3, vi + int3(0, 4, 5));
+                streams.SetTriangle(ti + 4, vi + int3(0, 5, 6));
+                streams.SetTriangle(ti + 5, vi + int3(0, 6, 1));
             }      
         }
     }
